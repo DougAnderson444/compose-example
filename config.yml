@@ -1,6 +1,11 @@
 search-paths:
-  - target/was32-wasi/release
+  - ./target/was32-wasi/release
 
-instantiations:
-  root:
-    arguments:
+dependencies:
+  increment:increment/increase@0.1.0: ./target/wasm32-wasi/debug/increment.wasm
+  shower:show/display@0.1.0: ./target/wasm32-wasi/debug/show.wasm
+  counter:count/change@0.1.0: ./target/wasm32-wasi/debug/count.wasm
+  counter:count/current@0.1.0: ./target/wasm32-wasi/debug/count.wasm
+# instantiations:
+#   root:
+#     arguments:

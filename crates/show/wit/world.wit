@@ -7,7 +7,7 @@ interface display {
 
 /// An example world for the component to target.
 world example {
-    import counter:count/show@0.1.0;
+    import counter:count/current@0.1.0;
 
     export display;
 }

@@ -4,12 +4,12 @@ interface change {
   increment: func();
 }
 
-interface show {
+interface current {
   count: func() -> u32;
 }
 
 /// An example world for the component to target.
 world example {
     export change;
-    export show;
+    export current;
 }

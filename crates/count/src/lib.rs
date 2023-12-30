@@ -3,7 +3,7 @@
 cargo_component_bindings::generate!();
 
 use crate::bindings::exports::counter::count::change::Guest as ChangeGuest;
-use crate::bindings::exports::counter::count::show::Guest as ShowGuest;
+use crate::bindings::exports::counter::count::current::Guest as ShowGuest;
 
 use std::sync::{LazyLock, Mutex};
 

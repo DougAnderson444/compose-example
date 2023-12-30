@@ -1,7 +1,7 @@
 cargo_component_bindings::generate!();
 
 use crate::bindings::exports::shower::show::display::Guest;
-use bindings::counter::count::show::count;
+use bindings::counter::count::current::count;
 
 struct Component;
 

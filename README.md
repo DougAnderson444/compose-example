@@ -5,5 +5,6 @@ A simple 3 component composition which shares a common `count` state.
 ## Compose
 
 ```bash
-wasm-tools compose --config config.yaml
+cargo component build --workspace
+wasm-tools compose --config config.yml --output aggregate.wasm target/wasm32-wasi/debug/aggregate.wasm
 ```
