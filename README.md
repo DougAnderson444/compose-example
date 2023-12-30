@@ -6,8 +6,8 @@ There should only be one instance of the `count` state, and it should be shared 
 
 ```mermaid
 graph BT;
-    Counter-->Increment;
-    Counter-->Show;
+    Count-->Increment;
+    Count-->Show;
     Increment-->Aggregate;
     Show-->Aggregate;
 ```
@@ -23,7 +23,9 @@ wasm-tools compose --config config.yml --output aggregate.wasm target/wasm32-was
 
 ## Test
 
-Then run the test:
+The test is in the [`aggregate`](./crates/aggregate/tests/mod.rs) crate.
+
+Run the test:
 
 ```bash
 cargo test -p aggregate
