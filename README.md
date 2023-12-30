@@ -1,10 +1,30 @@
 # Compose a Wasm DAG
 
-A simple 3 component composition which shares a common `count` state.
+A simple Directed Acyclic Graph (DAG) component composition which shares a common `count` state.
+
+There should only be one instance of the `count` state, and it should be shared between the `Increment` and `Show` components:
+
+```mermaid
+graph BT;
+    Counter-->Increment;
+    Counter-->Show;
+    Increment-->Aggregate;
+    Show-->Aggregate;
+```
 
 ## Compose
+
+Build and compose the components:
 
 ```bash
 cargo component build --workspace
 wasm-tools compose --config config.yml --output aggregate.wasm target/wasm32-wasi/debug/aggregate.wasm
+```
+
+## Test
+
+Then run the test:
+
+```bash
+cargo test -p aggregate
 ```
