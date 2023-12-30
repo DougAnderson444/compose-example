@@ -6,6 +6,15 @@ dependencies:
   shower:show/display@0.1.0: ./target/wasm32-wasi/debug/show.wasm
   counter:count/change@0.1.0: ./target/wasm32-wasi/debug/count.wasm
   counter:count/current@0.1.0: ./target/wasm32-wasi/debug/count.wasm
-# instantiations:
-#   root:
-#     arguments:
+
+instantiations:
+  root:
+    arguments:
+      increment:increment/increase@0.1.0: increment
+      shower:show/display@0.1.0: show
+  increment:
+    arguments:
+      counter:count/change@0.1.0: counter
+  show:
+    arguments:
+      counter:count/current@0.1.0: counter
