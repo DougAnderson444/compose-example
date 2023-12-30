@@ -1,0 +1,16 @@
+package counter:count@0.1.0;
+
+interface change {
+  increment: func();
+}
+
+interface current {
+  count: func() -> u32;
+}
+
+/// An example world for the component to target.
+world example {
+    export change;
+    export current;
+}
+
