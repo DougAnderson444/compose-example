@@ -1,0 +1,22 @@
+[package]
+name = "aggregate"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cargo-component-bindings = "0.6.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "aggregate:aggregate"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target.dependencies]
+"increment:increment" = { path = "../increment/wit" }
+"shower:show" = { path = "../show/wit" }
+"counter:count" = { path = "../count/wit" } 

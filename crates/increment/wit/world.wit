@@ -1,0 +1,11 @@
+package increment:increment@0.1.0;
+
+interface increase {
+  up: func();
+}
+
+/// An example world for the component to target.
+world example {
+    import counter:count/change@0.1.0;
+    export increase;
+}

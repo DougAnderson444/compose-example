@@ -1,0 +1,13 @@
+package shower:show@0.1.0;
+
+interface display {
+    // The component to show.
+    view: func() -> u32;
+}
+
+/// An example world for the component to target.
+world example {
+    import counter:count/show@0.1.0;
+
+    export display;
+}

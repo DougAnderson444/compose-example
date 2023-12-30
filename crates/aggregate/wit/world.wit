@@ -1,0 +1,14 @@
+package aggregate:aggregate@0.1.0;
+
+interface controls {
+  more: func();
+  inspect: func() -> u32;
+}
+
+/// An example world for the component to target.
+world example {
+  import increment:increment/increase@0.1.0;
+  import shower:show/display@0.1.0;
+
+  export controls;    
+}

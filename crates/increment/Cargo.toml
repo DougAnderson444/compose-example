@@ -1,0 +1,20 @@
+[package]
+name = "increment"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cargo-component-bindings = "0.6.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+package = "increment:increment"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target.dependencies]
+"counter:count" = { path = "../count/wit" } 

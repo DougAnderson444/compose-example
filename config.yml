@@ -1,0 +1,6 @@
+search-paths:
+  - target/was32-wasi/release
+
+instantiations:
+  root:
+    arguments:
