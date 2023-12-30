@@ -2,6 +2,7 @@ package increment:increment@0.1.0;
 
 interface increase {
   up: func();
+  current: func() -> u32;
 }
 
 /// An example world for the component to target.

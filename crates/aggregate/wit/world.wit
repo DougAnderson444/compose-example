@@ -2,6 +2,7 @@ package aggregate:aggregate@0.1.0;
 
 interface controls {
   more: func();
+  current: func() -> u32;
   inspect: func() -> u32;
 }
 

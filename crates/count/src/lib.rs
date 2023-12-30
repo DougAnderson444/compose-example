@@ -17,6 +17,11 @@ impl ChangeGuest for Component {
         let mut count = COUNT.lock().unwrap();
         *count += 1;
     }
+
+    fn current() -> u32 {
+        let count = COUNT.lock().unwrap();
+        *count
+    }
 }
 
 impl ShowGuest for Component {

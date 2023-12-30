@@ -121,6 +121,12 @@ mod aggregate_example_tests {
             .aggregate_aggregate_controls()
             .call_more(&mut store)?;
 
+        let current = bindings
+            .aggregate_aggregate_controls()
+            .call_current(&mut store)?;
+
+        assert_eq!(current, 1);
+
         let count = bindings
             .aggregate_aggregate_controls()
             .call_inspect(&mut store)?;
