@@ -8,6 +8,11 @@ edition = "2021"
 [dependencies]
 cargo-component-bindings = "0.6.0"
 
+[dev-dependencies]
+wasmtime = { version = "16", features = ['component-model'] }
+wasmtime-wasi = "16.0"
+thiserror = "1.0"
+
 [lib]
 crate-type = ["cdylib"]
 
