@@ -2,6 +2,7 @@ package counter:count@0.1.0;
 
 interface change {
   increment: func();
+  current: func() -> u32;
 }
 
 interface current {
@@ -13,4 +14,3 @@ world example {
     export change;
     export current;
 }
-
